@@ -9,4 +9,5 @@
 
 module.exports = function reverseWordsInSentence(input) {
   // TODO
+  return input.split(" ").map(word => word.split("").reverse().join("")).join(" ");
 };

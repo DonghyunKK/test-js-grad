@@ -12,4 +12,11 @@
 
 module.exports = function sortArray(arr) {
   // TODO
+  if (arr.length === 0){
+    return []
+  }else if (arr.every(x => typeof x !== "number")){
+    throw new TypeError();
+  }else {
+    return arr.sort((a,b) => a-b);
+  }
 };

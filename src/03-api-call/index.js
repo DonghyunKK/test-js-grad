@@ -36,4 +36,7 @@ The expected output is:
 
 module.exports = async function fetchLukeSkywalker() {
   // TODO
+  const fetch = require("node-fetch");
+  const info = await fetch("https://swapi.dev/api/people/1/").then(res => res.json()).then(data => data)
+  return info
 };
